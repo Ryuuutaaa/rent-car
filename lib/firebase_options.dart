@@ -46,12 +46,11 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'xxxxxxxxxxxxxxxxxxx',
-    appId: 'xxxxxxxxxxxxxxxxxxx',
-    messagingSenderId: 'xxxxxxxxxxxxxxxxxxx',
-    projectId: 'xxxxxxxxxxxxxxxxxxx',
-    databaseURL: 'xxxxxxxxxxxxxxxxxxx',
-    storageBucket: 'xxxxxxxxxxxxxxxxxxx',
+    apiKey: 'AIzaSyA7Ailj06RJsny9Xh7Mr26lISqXfSf6Lak',
+    appId: '1:291152742648:android:f6f9e85c73778bceded30d',
+    messagingSenderId: '291152742648',
+    projectId: 'rentapp-fg-x-187e5',
+    storageBucket: 'rentapp-fg-x-187e5.firebasestorage.app', // Asumsi berdasarkan konvensi penamaan
   );
 
   static const FirebaseOptions ios = FirebaseOptions(

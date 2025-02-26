@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "291152742648",
+    "project_id": "rentapp-fg-x-187e5",
+    "storage_bucket": "rentapp-fg-x-187e5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291152742648:android:f6f9e85c73778bceded30d",
+        "android_client_info": {
+          "package_name": "com.example.rent_car_architecture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Ailj06RJsny9Xh7Mr26lISqXfSf6Lak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
