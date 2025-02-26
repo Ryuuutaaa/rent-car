@@ -10,9 +10,21 @@ class OnboardingPage extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage('assets/Onboarding.png'),
-            )),
+              image: DecorationImage(
+                image: AssetImage('assets/onboarding.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Container(
+            child: Column(
+              children: [
+                Text(
+                  "Premium, \nEnjoy the luxury",
+                  style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           )
         ],
       ),
