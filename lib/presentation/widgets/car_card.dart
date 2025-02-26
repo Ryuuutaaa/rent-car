@@ -31,13 +31,16 @@ class CarCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Image.asset("assets/gps.png"),
+                      Image.asset("assets/gps.png", height: 120),
                       Text('${car.distance.toStringAsFixed(0)} km'),
                     ],
                   ),
                   Row(
                     children: [
-                      Image.asset("assets/pumb.png"),
+                      Image.asset(
+                        "assets/pumb.png",
+                        height: 120,
+                      ),
                       Text('${car.fuelCapacity.toStringAsFixed(0)} L'),
                     ],
                   ),
