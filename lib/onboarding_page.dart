@@ -8,20 +8,23 @@ class OnboardingPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          // Container(
-          //   decoration: BoxDecoration(
-          //     image: DecorationImage(
-          //       image: AssetImage('assets/onboarding.png'),
-          //       fit: BoxFit.cover,
-          //     ),
-          //   ),
-          // ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/onboarding.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
           Container(
             margin: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   "Premium, \nEnjoy the luxury",
                   style: TextStyle(
                     color: Colors.black54,
@@ -29,17 +32,17 @@ class OnboardingPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   'Premium and prestige car daily rental. \nExperience the thrill at a lower price',
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 16,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 SizedBox(
@@ -51,7 +54,7 @@ class OnboardingPage extends StatelessWidget {
                       foregroundColor: Colors.black,
                       backgroundColor: Colors.white,
                     ),
-                    child: const Text(
+                    child: Text(
                       "Lets go",
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
                     ),
