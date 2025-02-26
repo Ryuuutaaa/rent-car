@@ -27,9 +27,9 @@ class OnboardingPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Premium, \nEnjoy the luxury",
+                    "Premium cars, \nEnjoy the luxury",
                     style: TextStyle(
-                      color: Colors.black54,
+                      color: Colors.white,
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                     ),
