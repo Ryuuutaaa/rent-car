@@ -26,6 +26,13 @@ class CarDetailsPage extends StatelessWidget {
             height: 20,
           ),
           Container(
+            decoration: BoxDecoration(
+              color: Color(0xffF3F3F3),
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(color: Colors.black12, blurRadius: 10, spreadRadius: 5)
+              ],
+            ),
             child: Column(
               children: [
                 CircleAvatar(
