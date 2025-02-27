@@ -4,8 +4,9 @@ import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
 import 'package:rent_car_architecture/presentation/widgets/more_card.dart';
 
 class CarDetailsPage extends StatelessWidget {
-  const CarDetailsPage({super.key});
+  final Car car;
 
+  const CarDetailsPage({super.key, required this.car});
   @override
   Widget build(BuildContext context) {
     final car = Car(
