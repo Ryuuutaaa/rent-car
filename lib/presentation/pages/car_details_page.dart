@@ -53,6 +53,11 @@ class CarDetailsPage extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), image: DecorationImage(image: AssetImage('assets/maps.png'), fit: BoxFit.cover), boxShadow: [
+              BoxShadow(color: Colors.black12, blurRadius: 10, spreadRadius: 5)
+            ]),
+          ),
         ],
       ),
     );
