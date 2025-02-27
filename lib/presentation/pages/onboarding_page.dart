@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rent_car_architecture/presentation/pages/car_list_screen.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -21,7 +22,8 @@ class OnboardingPage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Container(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,19 +51,32 @@ class OnboardingPage extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 54,
-                    width: 320,
+                    width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CarListScreen(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.black,
                         backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                       child: Text(
-                        "Lets go",
-                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                        "Let's go",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
