@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rent_car_architecture/data/models/Car.dart';
+import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
 
 class CarListScreen extends StatelessWidget {
   const CarListScreen({super.key}) : super(key: key);
@@ -13,7 +14,14 @@ class CarListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: ListView.builder(itemBuilder: itemBuilder),
+      body: ListView.builder(
+        itemCount: cars.length,
+        itemBuilder: (context, index) {
+          return CarCard(
+            car: cars[index],
+          );
+        },
+      ),
     );
   }
 }
