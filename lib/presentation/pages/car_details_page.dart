@@ -9,13 +9,6 @@ class CarDetailsPage extends StatelessWidget {
   const CarDetailsPage({super.key, required this.car});
   @override
   Widget build(BuildContext context) {
-    final car = Car(
-      model: "Fortuner GR",
-      distance: 870,
-      fuelCapacity: 50,
-      pricePerHour: 45.00,
-    );
-
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -29,7 +22,7 @@ class CarDetailsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CarCard(car: car),
+            CarCard(car: Car(model: car.model, distance: car.distance, fuelCapacity: car.fuelCapacity, pricePerHour: car.pricePerHour)),
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -102,11 +95,11 @@ class CarDetailsPage extends StatelessWidget {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
-                  MoreCard(car: car),
+                  MoreCard(car: Car(model: car.model+"-1", distance: car.distance, fuelCapacity: car.fuelCapacity, pricePerHour: car.pricePerHour)),
                   SizedBox(height: 5),
-                  MoreCard(car: car),
+                  MoreCard(car: Car(model: car.model+"-2", distance: car.distance, fuelCapacity: car.fuelCapacity, pricePerHour: car.pricePerHour)),
                   SizedBox(height: 5),
-                  MoreCard(car: car),
+                  MoreCard(car: Car(model: car.model+"-3", distance: car.distance, fuelCapacity: car.fuelCapacity, pricePerHour: car.pricePerHour)),
                 ],
               ),
             ),
