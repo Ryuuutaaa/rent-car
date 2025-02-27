@@ -33,7 +33,23 @@ class MoreCard extends StatelessWidget {
                   ),
                   Text(
                     "> ${car.distance} km",
-                  )
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Icon(
+                    Icons.battery_full,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    car.fuelCapacity.toString(),
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ),
                 ],
               )
             ],
