@@ -9,8 +9,8 @@ class CarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      padding: EdgeInsets.all(20),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         children: [
           Image.asset(
@@ -19,9 +19,9 @@ class CarCard extends StatelessWidget {
           ),
           Text(
             car.model,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -29,21 +29,28 @@ class CarCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Row(
-                    children: [
-                      Image.asset("assets/gps.png", height: 120),
-                      Text('${car.distance.toStringAsFixed(0)} km'),
-                    ],
+                  Image.asset("assets/gps.png", height: 20),
+                  const SizedBox(
+                    width: 5,
                   ),
-                  Row(
-                    children: [
-                      Image.asset(
-                        "assets/pumb.png",
-                        height: 120,
-                      ),
-                      Text('${car.fuelCapacity.toStringAsFixed(0)} L'),
-                    ],
+                  Text(
+                    '${car.distance.toStringAsFixed(0)} km',
+                    style: const TextStyle(fontSize: 16),
                   ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Image.asset(
+                    "assets/pump.png",
+                    height: 20,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    '${car.fuelCapacity.toStringAsFixed(0)} L',
+                    style: const TextStyle(fontSize: 16),
+                  )
                 ],
               )
             ],
