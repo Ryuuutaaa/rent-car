@@ -64,7 +64,11 @@ class CarCard extends StatelessWidget {
                     style: const TextStyle(fontSize: 16),
                   )
                 ],
-              )
+              ),
+              Text(
+                "\$${car.pricePerHour.toStringAsFixed(2)}/h",
+                style: const TextStyle(fontSize: 16),
+              ),
             ],
           )
         ],
