@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rent_car_architecture/data/models/Car.dart';
+import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
 
 class CarDetailsPage extends StatelessWidget {
   const CarDetailsPage({super.key});
@@ -14,6 +16,37 @@ class CarDetailsPage extends StatelessWidget {
             Text(" Informatin"),
           ],
         ),
+      ),
+      body: Column(
+        children: [
+          CarCard(
+            car: Car(model: "Fortuner GR", distance: 870, fuelCapacity: 50, pricePerHour: 45),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: AssetImage('assets/user.ong'),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Jane Cooper',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  '\$4,253',
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
