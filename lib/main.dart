@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:rent_car_architecture/presentation/pages/car_details_page.dart';
 import 'package:rent_car_architecture/presentation/pages/car_list_screen.dart';
 import 'package:rent_car_architecture/presentation/pages/onboarding_page.dart';
 
@@ -43,7 +44,7 @@ class HomeScreen extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: OnboardingPage(),
+      home: CarDetailsPage(),
     );
   }
 }
