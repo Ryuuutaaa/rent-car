@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rent_car_architecture/data/models/Car.dart';
 import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
+import 'package:rent_car_architecture/presentation/widgets/more_card.dart';
 
 class CarDetailsPage extends StatelessWidget {
   const CarDetailsPage({super.key});
@@ -102,6 +103,21 @@ class CarDetailsPage extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              child: Column(
+                children: [
+                  MoreCard(
+                    car: Car(model: "Fortuner GR", distance: 870, fuelCapacity: 50, pricePerHour: 45.00),
+                  ),
+                  MoreCard(
+                    car: Car(model: "Fortuner GR", distance: 870, fuelCapacity: 50, pricePerHour: 45.00),
+                  ),
+                  MoreCard(
+                    car: Car(model: "Fortuner GR", distance: 870, fuelCapacity: 50, pricePerHour: 45.00),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
