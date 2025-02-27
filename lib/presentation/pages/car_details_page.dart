@@ -11,6 +11,7 @@ class CarDetailsPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.info_outline),
+            Text(" Informatin"),
           ],
         ),
       ),
