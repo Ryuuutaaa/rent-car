@@ -82,7 +82,7 @@ class CarDetailsPage extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                      height: 150,
+                      height: 170,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
