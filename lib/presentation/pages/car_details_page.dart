@@ -8,6 +8,13 @@ class CarDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final car = Car(
+      model: "Fortuner GR",
+      distance: 870,
+      fuelCapacity: 50,
+      pricePerHour: 45.00,
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -21,17 +28,8 @@ class CarDetailsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CarCard(
-              car: Car(
-                model: "Fortuner GR",
-                distance: 870,
-                fuelCapacity: 50,
-                pricePerHour: 45,
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
+            CarCard(car: car),
+            SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -58,9 +56,7 @@ class CarDetailsPage extends StatelessWidget {
                               radius: 40,
                               backgroundImage: AssetImage('assets/user.png'),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10),
                             Text(
                               'Jane Cooper',
                               style: TextStyle(
@@ -78,9 +74,7 @@ class CarDetailsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: 20,
-                  ),
+                  SizedBox(width: 20),
                   Expanded(
                     child: Container(
                       height: 210,
@@ -104,20 +98,17 @@ class CarDetailsPage extends StatelessWidget {
               ),
             ),
             Container(
+              padding: EdgeInsets.all(20),
               child: Column(
                 children: [
-                  MoreCard(
-                    car: Car(model: "Fortuner GR", distance: 870, fuelCapacity: 50, pricePerHour: 45.00),
-                  ),
-                  MoreCard(
-                    car: Car(model: "Fortuner GR", distance: 870, fuelCapacity: 50, pricePerHour: 45.00),
-                  ),
-                  MoreCard(
-                    car: Car(model: "Fortuner GR", distance: 870, fuelCapacity: 50, pricePerHour: 45.00),
-                  )
+                  MoreCard(car: car),
+                  SizedBox(height: 5),
+                  MoreCard(car: car),
+                  SizedBox(height: 5),
+                  MoreCard(car: car),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
