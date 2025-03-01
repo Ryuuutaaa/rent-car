@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rent_car_architecture/data/models/Car.dart';
+import 'package:rent_car_architecture/presentation/pages/MapsDetailsPage.dart';
 import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
 import 'package:rent_car_architecture/presentation/widgets/more_card.dart';
 
@@ -72,7 +73,15 @@ class CarDetailsPage extends StatelessWidget {
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-                        //MapDeailsPage
+                        //
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MapsDetailsPage(
+                              car: car, // Gunakan variabel car (huruf kecil), bukan Car (huruf besar)
+                            ),
+                          ),
+                        );
                       },
                       child: Container(
                         height: 210,
