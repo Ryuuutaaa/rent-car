@@ -67,6 +67,7 @@ Widget CardDetailCard() {
                 BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
               ]),
           child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20),
               Text(
@@ -109,7 +110,22 @@ Widget CardDetailCard() {
               )
             ],
           ),
-        )
+        ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          right: 0,
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+            ),
+          ),
+        ),
       ],
     ),
   );
