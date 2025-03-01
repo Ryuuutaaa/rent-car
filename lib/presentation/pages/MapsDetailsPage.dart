@@ -19,22 +19,55 @@ class MapsDetailsPage extends StatelessWidget {
           ),
         ),
       ),
-      body: FlutterMap(
-        options: MapOptions(
-          initialCenter: LatLng(51.5, -0.09),
-          initialZoom: 13.0,
-        ),
+      body: Stack(
         children: [
-          TileLayer(
-            urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-            subdomains: [
-              'a',
-              'b',
-              'c'
+          FlutterMap(
+            options: const MapOptions(
+              initialCenter: LatLng(51.5, -0.09),
+              initialZoom: 13.0,
+            ),
+            children: [
+              TileLayer(
+                urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                subdomains: [
+                  'a',
+                  'b',
+                  'c'
+                ],
+              ),
             ],
           ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: CardDetailCard(),
+          )
         ],
       ),
     );
   }
+}
+
+Widget cardDetailCard() {
+  return SizedBox(
+    height: 350,
+    child: Stack(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          width: double.infinity,
+          decoration: const BoxDecoration(
+              color: Colors.black54,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                topRight: Radius.circular(30),
+              ),
+              boxShadow: [
+                BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
+              ]),
+        )
+      ],
+    ),
+  );
 }
