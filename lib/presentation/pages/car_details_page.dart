@@ -24,7 +24,7 @@ class CarDetailsPage extends StatelessWidget {
         child: Column(
           children: [
             CarCard(car: Car(model: car.model, distance: car.distance, fuelCapacity: car.fuelCapacity, pricePerHour: car.pricePerHour)),
-            SizedBox(height: 20),
+           const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
