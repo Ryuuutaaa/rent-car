@@ -66,6 +66,15 @@ Widget cardDetailCard() {
               boxShadow: [
                 BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
               ]),
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Text(
+                'Car.model',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+              )
+            ],
+          ),
         )
       ],
     ),
