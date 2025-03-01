@@ -69,7 +69,7 @@ class CarDetailsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
