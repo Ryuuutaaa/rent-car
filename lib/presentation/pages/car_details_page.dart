@@ -43,7 +43,7 @@ class CarDetailsPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.all(20),
                         child: Column(
                           children: [
