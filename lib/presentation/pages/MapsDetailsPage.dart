@@ -89,7 +89,22 @@ Widget CardDetailCard() {
                   Text(
                     '> car.distance km',
                     style: TextStyle(color: Colors.white, fontSize: 14),
-                  )
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.battery_full,
+                    color: Colors.white,
+                    size: 14,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    '> car.fullCapacity',
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ),
                 ],
               )
             ],
