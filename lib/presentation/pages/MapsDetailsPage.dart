@@ -131,7 +131,7 @@ Widget CardDetailCard() {
                   "Featrues",
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                // featureIcons()
+                fearueIcons();
                 SizedBox(
                   height: 20,
                 ),
@@ -165,7 +165,9 @@ Widget featureIcons() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
-      featureIcon(Icons.local_gas_station, "Diesel", "Common Rail");
+      featureIcon(Icons.local_gas_station, "Diesel", "Common Rail"),
+      featureIcon(Icons.speed, "Acceleration", "0 - 100km/s"),
+      featureIcon(Icons.ac_unit, "Cold", "Temp Control"),
     ],
   );
 }
