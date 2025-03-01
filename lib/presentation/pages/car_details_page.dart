@@ -31,7 +31,7 @@ class CarDetailsPage extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: Color(0xffF3F3F3),
                         borderRadius: BorderRadius.circular(20),
