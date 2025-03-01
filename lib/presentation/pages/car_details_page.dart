@@ -24,19 +24,19 @@ class CarDetailsPage extends StatelessWidget {
         child: Column(
           children: [
             CarCard(car: Car(model: car.model, distance: car.distance, fuelCapacity: car.fuelCapacity, pricePerHour: car.pricePerHour)),
-           const SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
                   Expanded(
                     child: Container(
-                      padding: const EdgeInsets.all(20),
+                      padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: const Color(0xffF3F3F3),
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
-                          BoxShadow(
+                          const BoxShadow(
                             color: Colors.black12,
                             blurRadius: 10,
                             spreadRadius: 5,
