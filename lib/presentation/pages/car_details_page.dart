@@ -12,8 +12,8 @@ class CarDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Icon(Icons.info_outline),
             Text(" Information"),
