@@ -124,13 +124,34 @@ Widget CardDetailCard() {
                 topRight: Radius.circular(20),
               ),
             ),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "Featrues",
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
+                // featureIcons()
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '\$car.price',
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                      child: Text(
+                        'Book Now',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
