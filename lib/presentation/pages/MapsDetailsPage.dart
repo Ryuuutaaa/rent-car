@@ -49,7 +49,7 @@ class MapsDetailsPage extends StatelessWidget {
   }
 }
 
-Widget cardDetailCard() {
+Widget CardDetailCard() {
   return SizedBox(
     height: 350,
     child: Stack(
@@ -66,7 +66,7 @@ Widget cardDetailCard() {
               boxShadow: [
                 BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
               ]),
-          child: Column(
+          child: const Column(
             children: [
               SizedBox(height: 20),
               Text(
