@@ -70,21 +70,26 @@ class CarDetailsPage extends StatelessWidget {
                   ),
                   SizedBox(width: 20),
                   Expanded(
-                    child: Container(
-                      height: 210,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                          image: AssetImage('assets/maps.png'),
-                          fit: BoxFit.cover,
+                    child: GestureDetector(
+                      onTap: () {
+                        //MapDeailsPage
+                      },
+                      child: Container(
+                        height: 210,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage('assets/maps.png'),
+                            fit: BoxFit.cover,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 10,
+                              spreadRadius: 5,
+                            )
+                          ],
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 10,
-                            spreadRadius: 5,
-                          )
-                        ],
                       ),
                     ),
                   ),
