@@ -87,12 +87,12 @@ class CarDetailsPage extends StatelessWidget {
                         height: 210,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: AssetImage('assets/maps.png'),
                             fit: BoxFit.cover,
                           ),
                           boxShadow: [
-                            BoxShadow(
+                            const BoxShadow(
                               color: Colors.black12,
                               blurRadius: 10,
                               spreadRadius: 5,
