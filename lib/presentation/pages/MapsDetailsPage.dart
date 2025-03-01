@@ -124,6 +124,15 @@ Widget CardDetailCard() {
                 topRight: Radius.circular(20),
               ),
             ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Featrues",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           ),
         ),
       ],
