@@ -72,6 +72,25 @@ Widget CardDetailCard() {
               Text(
                 'Car.model',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.directions_car,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    '> car.distance km',
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  )
+                ],
               )
             ],
           ),
