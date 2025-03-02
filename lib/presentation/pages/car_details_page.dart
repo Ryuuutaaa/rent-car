@@ -18,7 +18,6 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
   Animation<double>? _animation;
 
   @override
-  @override
   void initState() {
     super.initState();
     _controller = AnimationController(
@@ -28,6 +27,12 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
         setState(() {});
       });
     _animation = Tween<double>(begin: 1.0, end: 1.5).animate(_controller!);
+  }
+
+  @override
+  void dispose() {
+    _controller!.forward();
+    super.dispose();
   }
 
   @override
