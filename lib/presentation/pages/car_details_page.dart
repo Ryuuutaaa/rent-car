@@ -18,12 +18,16 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
   Animation<double>? _animation;
 
   @override
+  @override
   void initState() {
+    super.initState();
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 31),
-    );
-    super.initState();
+    )..addListener(() {
+        setState(() {});
+      });
+    _animation = Tween<double>(begin: 1.0, end: 1.5).animate(_controller!);
   }
 
   @override
