@@ -22,16 +22,24 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 31),
+      duration: const Duration(seconds: 3),
     )..addListener(() {
         setState(() {});
       });
-    _animation = Tween<double>(begin: 1.0, end: 1.5).animate(_controller!);
+    _animation = Tween<double>(begin: 1.0, end: 1.2).animate(_controller!)
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          _controller!.reverse();
+        } else if (status == AnimationStatus.dismissed) {
+          _controller!.forward();
+        }
+      });
+    _controller!.forward();
   }
 
   @override
   void dispose() {
-    _controller!.forward();
+    _controller!.dispose();
     super.dispose();
   }
 
@@ -114,10 +122,6 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
                         height: 210,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          image: const DecorationImage(
-                            image: AssetImage('assets/maps.png'),
-                            fit: BoxFit.cover,
-                          ),
                           boxShadow: [
                             const BoxShadow(
                               color: Colors.black12,
@@ -125,6 +129,17 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
                               spreadRadius: 5,
                             )
                           ],
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Transform.scale(
+                            scale: _animation!.value,
+                            alignment: Alignment.center,
+                            child: Image.asset(
+                              'assets/maps.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                       ),
                     ),
