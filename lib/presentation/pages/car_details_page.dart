@@ -19,7 +19,10 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
 
   @override
   void initState() {
-    // TODO: implement initState
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 31),
+    );
     super.initState();
   }
 
