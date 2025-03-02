@@ -142,7 +142,7 @@ Widget cardDetailCard({required Car car}) {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '\$${car.pricePerHour}',
+                      '\$${car.pricePerHour}/day',
                       style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                     ElevatedButton(
@@ -161,7 +161,7 @@ Widget cardDetailCard({required Car car}) {
         ),
         Positioned(
           top: 50,
-          right: 50,
+          right: 20,
           child: Image.asset("assets/white_car.png"),
         ),
       ],
