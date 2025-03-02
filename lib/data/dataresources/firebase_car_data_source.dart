@@ -4,7 +4,7 @@ import 'package:rent_car_architecture/data/models/car.dart';
 class FirebaseCarDataSource {
   final FirebaseFirestore firestore;
 
-  FirebaseFirestore({required this.firestore});
+  FirebaseCarDataSource({required this.firestore});
 
   Future<List<Car>> getCars() async {
     var snapshot = await firestore.collection("cars").get();
