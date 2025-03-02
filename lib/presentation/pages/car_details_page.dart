@@ -4,10 +4,16 @@ import 'package:rent_car_architecture/presentation/pages/MapsDetailsPage.dart';
 import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
 import 'package:rent_car_architecture/presentation/widgets/more_card.dart';
 
-class CarDetailsPage extends StatelessWidget {
+class CarDetailsPage extends StatefulWidget {
   final Car car;
 
   const CarDetailsPage({super.key, required this.car});
+
+  @override
+  State<CarDetailsPage> createState() => _CarDetailsPageState();
+}
+
+class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +29,7 @@ class CarDetailsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CarCard(car: Car(model: car.model, distance: car.distance, fuelCapacity: car.fuelCapacity, pricePerHour: car.pricePerHour)),
+            CarCard(car: Car(model: widget.car.model, distance: widget.car.distance, fuelCapacity: widget.car.fuelCapacity, pricePerHour: widget.car.pricePerHour)),
             const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -78,7 +84,7 @@ class CarDetailsPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => MapsDetailsPage(
-                              car: car, // Gunakan variabel car (huruf kecil), bukan Car (huruf besar)
+                              car: widget.car, // Gunakan variabel car (huruf kecil), bukan Car (huruf besar)
                             ),
                           ),
                         );
@@ -109,12 +115,12 @@ class CarDetailsPage extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  MoreCard(car: Car(model: car.model + "-1", distance: car.distance + 100, fuelCapacity: car.fuelCapacity + 100, pricePerHour: car.pricePerHour + 10)),
+                  MoreCard(car: Car(model: widget.car.model + "-1", distance: widget.car.distance + 100, fuelCapacity: widget.car.fuelCapacity + 100, pricePerHour: widget.car.pricePerHour + 10)),
                   const SizedBox(height: 5),
-                  MoreCard(car: Car(model: car.model + "-2", distance: car.distance + 200, fuelCapacity: car.fuelCapacity + 200, pricePerHour: car.pricePerHour + 20)),
+                  MoreCard(car: Car(model: widget.car.model + "-2", distance: widget.car.distance + 200, fuelCapacity: widget.car.fuelCapacity + 200, pricePerHour: widget.car.pricePerHour + 20)),
                   const SizedBox(height: 5),
                   MoreCard(
-                    car: Car(model: car.model + "-3", distance: car.distance + 300, fuelCapacity: car.fuelCapacity + 300, pricePerHour: car.pricePerHour + 30),
+                    car: Car(model: widget.car.model + "-3", distance: widget.car.distance + 300, fuelCapacity: widget.car.fuelCapacity + 300, pricePerHour: widget.car.pricePerHour + 30),
                   ),
                 ],
               ),
