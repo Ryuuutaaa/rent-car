@@ -1,11 +1,10 @@
-// lib/presentation/pages/car_list_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rent_car_architecture/presentation/bloc/car_bloc.dart';
-import 'package:rent_car_architecture/presentation/bloc/car_state.dart';
 import 'package:rent_car_architecture/presentation/bloc/car_event.dart';
+import 'package:rent_car_architecture/presentation/bloc/car_state.dart';
 import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
-import 'package:rent_car_architecture/data/models/car.dart';
+import 'package:rent_car_architecture/data/models/Car.dart';
 
 class CarListScreen extends StatelessWidget {
   @override
@@ -52,7 +51,7 @@ class CarListScreen extends StatelessWidget {
               itemCount: state.cars.length,
               itemBuilder: (context, index) {
                 return CarCard(
-                  car: state.cars[index],
+                  car: state.cars[index] as Car,
                 );
               },
             );

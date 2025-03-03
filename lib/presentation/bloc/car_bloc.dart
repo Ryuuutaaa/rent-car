@@ -7,7 +7,7 @@ import 'package:rent_car_architecture/domain/usecases/get_cars.dart';
 class CarBloc extends Bloc<CarEvent, CarState> {
   final CarRepository repository;
 
-  CarBloc({required this.repository}) : super(CarsInitial()) {
+  CarBloc({required this.repository}) : super(CarsLoading()) {
     on<LoadCars>(_onLoadCars);
     on<AddSampleCars>(_onAddSampleCars);
   }
@@ -16,9 +16,9 @@ class CarBloc extends Bloc<CarEvent, CarState> {
     emit(CarsLoading());
     try {
       final cars = await repository.fetchCars();
-      emit(CarsLoaded(cars: cars));
+      emit(CarsLoaded(cars));
     } catch (e) {
-      emit(CarsError(message: e.toString()));
+      emit(CarsError(e.toString()));
     }
   }
 
@@ -27,7 +27,7 @@ class CarBloc extends Bloc<CarEvent, CarState> {
       await repository.addSampleCars();
       add(LoadCars());
     } catch (e) {
-      emit(CarsError(message: e.toString()));
+      emit(CarsError(e.toString()));
     }
   }
 }
