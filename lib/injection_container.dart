@@ -9,13 +9,17 @@ import 'package:rent_car_architecture/presentation/bloc/car_bloc.dart';
 final getIt = GetIt.instance;
 
 void initInjection() {
-  getIt.registerLazySingleton<FirebaseFirestore>(() => FirebaseFirestore.instance);
+  try {
+    getIt.registerLazySingleton<FirebaseFirestore>(() => FirebaseFirestore.instance);
 
-  getIt.registerLazySingleton<FirebaseCarDataSource>(() => FirebaseCarDataSource(firestore: getIt<FirebaseFirestore>()));
+    getIt.registerLazySingleton<FirebaseCarDataSource>(() => FirebaseCarDataSource(firestore: getIt<FirebaseFirestore>()));
 
-  getIt.registerLazySingleton<CarRepository>(() => CarRepositoryImpl(getIt<FirebaseCarDataSource>()));
+    getIt.registerLazySingleton<CarRepository>(() => CarRepositoryImpl(getIt<FirebaseCarDataSource>()));
 
-  getIt.registerLazySingleton<GetCars>(() => GetCars(getIt<CarRepository>()));
+    getIt.registerLazySingleton<GetCars>(() => GetCars(getIt<CarRepository>()));
 
-  getIt.registerFactory<CarBloc>(() => CarBloc(getCars: getIt<GetCars>()));
+    getIt.registerFactory<CarBloc>(() => CarBloc(getCars: getIt<GetCars>()));
+  } catch (e) {
+    throw e;
+  }
 }
