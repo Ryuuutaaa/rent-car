@@ -1,3 +1,3 @@
 abstract class CarEvent {}
 
-class LoadCard extends CarEvent {}
+class LoadCars extends CarEvent {}
