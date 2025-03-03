@@ -9,7 +9,6 @@ class CarRepositoryImpl implements CarRepository {
 
   @override
   Future<List<Car>> fetchCars() {
-    // TODO: implement fetchCars
-    throw UnimplementedError();
+    return dataSource.getCars();
   }
 }
