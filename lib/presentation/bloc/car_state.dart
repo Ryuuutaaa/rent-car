@@ -1,4 +1,4 @@
-import 'package:rent_car_architecture/data/models/car.dart';
+import 'package:rent_car_architecture/data/models/Car.dart';
 
 abstract class CarState {}
 

@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:rent_car_architecture/data/models/car.dart';
+import 'package:rent_car_architecture/data/models/Car.dart';
 
 class FirebaseCarDataSource {
   final FirebaseFirestore firestore;

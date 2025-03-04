@@ -1,7 +1,7 @@
-import 'package:rent_car_architecture/presentation/bloc/car_event.dart';
-import 'package:rent_car_architecture/presentation/bloc/car_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rent_car_architecture/domain/usecases/get_cars.dart';
+import 'package:rent_car_architecture/presentation/bloc/car_event.dart';
+import 'package:rent_car_architecture/presentation/bloc/car_state.dart';
 
 class CarBloc extends Bloc<CarEvent, CarState> {
   final GetCars getCars;

@@ -1,5 +1,5 @@
 import 'package:rent_car_architecture/data/dataresources/firebase_car_data_source.dart';
-import 'package:rent_car_architecture/data/models/car.dart';
+import 'package:rent_car_architecture/data/models/Car.dart';
 import 'package:rent_car_architecture/domain/repositories/car_repository.dart';
 
 class CarRepositoryImpl implements CarRepository {
