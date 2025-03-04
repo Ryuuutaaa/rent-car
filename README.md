@@ -19,6 +19,7 @@ This application provides a platform for renting premium and prestige cars at co
 - **Detailed Information**: View comprehensive details about each car, including mileage, fuel capacity, and rental rates. Users can also see different variants of the same model.
 
   ![Detailed Information](assets/details.car.png)
+  <br/>
   *Image 3: The detailed information screen, showing specific details about a selected car.*
 
 - **User Profiles**: Manage rentals with user-specific information. The app allows users to track their rentals and view their rental history.
