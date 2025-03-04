@@ -7,6 +7,7 @@ A Flutter project for premium car rentals.
 This application provides a platform for renting premium and prestige cars at competitive prices. Users can choose from a variety of high-end vehicles, such as the Fortuner GR, and enjoy features like diesel engines, advanced acceleration, and temperature control. The app is designed to offer a seamless and luxurious car rental experience, with a focus on user convenience and advanced features.
 
 ![Premium Cars](assets/landingpage.png)
+<br/>
 *Image 1: The landing page of the application, showcasing premium car rental services.*
 
 ## Features
