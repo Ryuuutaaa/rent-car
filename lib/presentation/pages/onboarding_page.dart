@@ -13,7 +13,7 @@ class OnboardingPage extends StatelessWidget {
           Expanded(
             flex: 2,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/onboarding.png'),
                   fit: BoxFit.cover,
@@ -28,7 +28,7 @@ class OnboardingPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                 const Text(
                     "Premium cars, \nEnjoy the luxury",
                     style: TextStyle(
                       color: Colors.white,
@@ -36,17 +36,17 @@ class OnboardingPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                 const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                 const Text(
                     'Premium and prestige car daily rental. \nExperience the thrill at a lower price',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
                     ),
                   ),
-                  SizedBox(
+                 const SizedBox(
                     height: 20,
                   ),
                   SizedBox(
@@ -67,7 +67,7 @@ class OnboardingPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Let's go",
                         style: TextStyle(
                           color: Colors.black,
