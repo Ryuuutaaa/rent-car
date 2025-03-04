@@ -14,6 +14,7 @@ This application provides a platform for renting premium and prestige cars at co
 - **Car Selection**: Choose from a range of premium cars like the Fortuner GR. The app provides detailed information about each car, including fuel efficiency and rental rates.
   
   ![Car Selection](assets/list_screen_car.png)
+  <br/>
   *Image 2: The car selection screen, displaying available cars and their specifications.*
 
 - **Detailed Information**: View comprehensive details about each car, including mileage, fuel capacity, and rental rates. Users can also see different variants of the same model.
