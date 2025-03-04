@@ -26,6 +26,7 @@ This application provides a platform for renting premium and prestige cars at co
 - **Location-Based Services**: Explore available cars in various locations like Barnsbury, Islington, and Shoreditch. The app integrates with maps to show car availability in different areas.
 
   ![Location-Based Services](assets/mapDetails.png)
+<br/>
   *Image 4: The map view, displaying car availability in different locations.*
 
 ## Getting Started
