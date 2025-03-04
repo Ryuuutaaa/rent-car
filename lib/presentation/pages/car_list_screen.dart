@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rent_car_architecture/presentation/bloc/car_bloc.dart';
 import 'package:rent_car_architecture/presentation/bloc/car_state.dart';
 import 'package:rent_car_architecture/presentation/widgets/car_card.dart';
-import 'package:rent_car_architecture/data/models/Car.dart';
 
 class CarListScreen extends StatelessWidget {
   @override
